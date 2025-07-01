@@ -16,6 +16,7 @@ RUN apt-get install -y maven
 RUN curl -O https://download.oracle.com/java/24/latest/jdk-24_linux-x64_bin.deb
 RUN apt-get install -y ./jdk-24_linux-x64_bin.deb
 
+# -- Install Project Dependencies -- #
 RUN mvn install
 
 CMD ["mvn", "initialize"]
